@@ -23,7 +23,7 @@ jobs:
 
       - name: 生成静态文件
         run: |
-          hexo generate   # 或者 hexo generate，但需要在 package.json 里定义
+          npm run build   # 或者 hexo generate，但需要在 package.json 里定义
         # 或者在步骤中直接执行 hexo generate
         # 如果没有 package.json 脚本，可以用 npx hexo generate
 
