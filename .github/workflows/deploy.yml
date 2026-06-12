@@ -1,0 +1,36 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'   # 和你本地版本接近即可
+
+      - name: 安装 Hexo 依赖
+        run: |
+          npm install
+
+      - name: 生成静态文件
+        run: |
+          hexo generate   # 或者 hexo generate，但需要在 package.json 里定义
+        # 或者在步骤中直接执行 hexo generate
+        # 如果没有 package.json 脚本，可以用 npx hexo generate
+
+      - name: 部署到 gh-pages 分支
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages   # 推送到 gh-pages 分支
+          force_orphan: true
