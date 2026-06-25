@@ -1,0 +1,1 @@
+hexo new -p "tech/硬件学习/$1"

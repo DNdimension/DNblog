@@ -1,7 +1,10 @@
 ---
 title: BlogLog
-date: 2026-06-18 11:11:25
 tags: test
+categories:
+  - tech
+  - BlogTest
+date: 2026-06-18 11:11:25
 ---
 # 26.6.18
 打算记录博客创建的历程与得到的经验  
@@ -149,4 +152,9 @@ theme: next
 使用menu和词云图  
 
 ## 26.6.18
-发现若执行hexo s后修改md文件，网页会自动更新
+发现若执行hexo s后修改md文件，网页会自动更新  
+添加了categories，archives，更改了tags。加入插件hexo-auto-category，并且修改了_config.yml对应内容 
+
+## 26.6.24
+使用html代码之后要空一行才能继续进行书写  
+
