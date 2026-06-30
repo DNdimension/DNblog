@@ -144,17 +144,19 @@ theme: next
 采用代替主题配置：  
 根目录下创建_config.next.yml，在themes/next/_config.yml中找到需要更改的配置选项，复制到_config.next.yml文件中  
 
-## 回想26.6.15
+## 回想26.6.15  
 修改了markdown渲染器，为渲染katex数学公式  
 
-## 回想26.6.16
+## 回想26.6.16  
 使用tags  
 使用menu和词云图  
 
-## 26.6.18
+## 26.6.18  
 发现若执行hexo s后修改md文件，网页会自动更新  
 添加了categories，archives，更改了tags。加入插件hexo-auto-category，并且修改了_config.yml对应内容 
 
-## 26.6.24
+## 26.6.24  
 使用html代码之后要空一行才能继续进行书写  
 
+## 26.6.27  
+分隔符要和前一个部分之间空一行
