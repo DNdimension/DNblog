@@ -151,12 +151,20 @@ theme: next
 使用tags  
 使用menu和词云图  
 
-## 26.6.18  
+# 26.6.18  
 发现若执行hexo s后修改md文件，网页会自动更新  
 添加了categories，archives，更改了tags。加入插件hexo-auto-category，并且修改了_config.yml对应内容 
 
-## 26.6.24  
+# 26.6.24  
 使用html代码之后要空一行才能继续进行书写  
 
-## 26.6.27  
+# 26.6.27  
 分隔符要和前一个部分之间空一行
+
+# 26.8.27
+katex行内公式，起始 $ 之后，终止 $ 之前不要打空格  
+win端配置了git的ssh之后，要把项目地址改成ssh
+{% codeblock bash lang:bash %}
+git remote -v #查看仓库地址
+git remote set-url origin git@github.com:用户名/仓库.git #更改为ssh
+{% endcodeblock %}
