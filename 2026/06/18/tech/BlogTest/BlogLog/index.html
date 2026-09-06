@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/DNblog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/DNblog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/DNblog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/DNblog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/DNblog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dndimension.github.io","root":"/DNblog/","images":"/DNblog/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/DNblog/js/config.js" defer></script>
+
+    <meta name="description" content="26.6.18 打算记录博客创建的历程与得到的经验  回想26.6.12 博客创立，使用hexo+github actions&amp;&amp;pages  初始化hexo bash1234npm install -g hexo-clihexo init .&#x2F;DNblogcd DNblognpm install  配置路由 在根目录_config.yml添加字段： _config.yml12u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BlogLog">
+<meta property="og:url" content="https://dndimension.github.io/DNblog/2026/06/18/tech/BlogTest/BlogLog/index.html">
+<meta property="og:site_name" content="DNblog">
+<meta property="og:description" content="26.6.18 打算记录博客创建的历程与得到的经验  回想26.6.12 博客创立，使用hexo+github actions&amp;&amp;pages  初始化hexo bash1234npm install -g hexo-clihexo init .&#x2F;DNblogcd DNblognpm install  配置路由 在根目录_config.yml添加字段： _config.yml12u">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-06-18T11:11:25.000Z">
+<meta property="article:modified_time" content="2026-09-06T05:30:55.520Z">
+<meta property="article:author" content="DN">
+<meta property="article:tag" content="test">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dndimension.github.io/DNblog/2026/06/18/tech/BlogTest/BlogLog/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dndimension.github.io/DNblog/2026/06/18/tech/BlogTest/BlogLog/","path":"2026/06/18/tech/BlogTest/BlogLog/","title":"BlogLog"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>BlogLog | DNblog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/DNblog/js/utils.js" defer></script><script src="/DNblog/js/motion.js" defer></script><script src="/DNblog/js/sidebar.js" defer></script><script src="/DNblog/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/DNblog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/DNblog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">DNblog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/DNblog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/DNblog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/DNblog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/DNblog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#26618"><span class="nav-number">1.</span> <span class="nav-text"> 26.6.18</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%83%B326612"><span class="nav-number">1.1.</span> <span class="nav-text"> 回想26.6.12</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96hexo"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 初始化hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 配置路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96git"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 初始化git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgithub-actions%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 配置github actions工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgithub-pages"><span class="nav-number">1.1.5.</span> <span class="nav-text"> 配置github pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD%E6%9B%B4%E6%96%B0"><span class="nav-number">1.1.6.</span> <span class="nav-text"> 后续更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%83%B326613"><span class="nav-number">1.2.</span> <span class="nav-text"> 回想26.6.13</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%9B%BF%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 交替更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%83%B326614"><span class="nav-number">1.3.</span> <span class="nav-text"> 回想26.6.14</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 应用主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%83%B326615"><span class="nav-number">1.4.</span> <span class="nav-text"> 回想26.6.15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%83%B326616"><span class="nav-number">1.5.</span> <span class="nav-text"> 回想26.6.16</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26618-2"><span class="nav-number">2.</span> <span class="nav-text"> 26.6.18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26624"><span class="nav-number">3.</span> <span class="nav-text"> 26.6.24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26627"><span class="nav-number">4.</span> <span class="nav-text"> 26.6.27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#26827"><span class="nav-number">5.</span> <span class="nav-text"> 26.8.27</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DN</p>
+  <div class="site-description" itemprop="description">For Life & Learns</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/DNblog/archives/">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/DNblog/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/DNblog/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dndimension.github.io/DNblog/2026/06/18/tech/BlogTest/BlogLog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/DNblog/images/avatar.gif">
+      <meta itemprop="name" content="DN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNblog">
+      <meta itemprop="description" content="For Life & Learns">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="BlogLog | DNblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          BlogLog
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-06-18 11:11:25" itemprop="dateCreated datePublished" datetime="2026-06-18T11:11:25+00:00">2026-06-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-09-06 05:30:55" itemprop="dateModified" datetime="2026-09-06T05:30:55+00:00">2026-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/tech/BlogTest/" itemprop="url" rel="index"><span itemprop="name">BlogTest</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="26618"><a class="markdownIt-Anchor" href="#26618"></a> 26.6.18</h1>
+<p>打算记录博客创建的历程与得到的经验</p>
+<h2 id="回想26612"><a class="markdownIt-Anchor" href="#回想26612"></a> 回想26.6.12</h2>
+<p>博客创立，使用hexo+github actions&amp;&amp;pages</p>
+<h3 id="初始化hexo"><a class="markdownIt-Anchor" href="#初始化hexo"></a> 初始化hexo</h3>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init ./DNblog</span><br><span class="line"><span class="built_in">cd</span> DNblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="配置路由"><a class="markdownIt-Anchor" href="#配置路由"></a> 配置路由</h3>
+<p>在根目录_config.yml添加字段：</p>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://dndimension.github.io/DNblog</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/DNblog/</span></span><br></pre></td></tr></table></figure>
+<p>这里其实可以把其他可见的介绍信息也改了</p>
+<h3 id="初始化git"><a class="markdownIt-Anchor" href="#初始化git"></a> 初始化git</h3>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin https://github.com/DNdimension/DNblog.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;初始提交&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+<p>不要把node_modules文件夹和public文件夹放到缓冲区<br />
+应该是由于在电脑上操作了第二行命令，后续提交不需要token之类的东西。后来尝试在手机上更新时就需要token</p>
+<h3 id="配置github-actions工作流"><a class="markdownIt-Anchor" href="#配置github-actions工作流"></a> 配置github actions工作流</h3>
+<p>配置是AI给的，给的时候没有permisssion相关，之前部署rss也出现过类似问题</p>
+<figure class="highlight yaml"><figcaption><span>.github&#x2F;workflows&#x2F;deploy.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">Hexo</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span>  <span class="comment"># 当推送到 main 分支时触发</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build-and-deploy:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">代码</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装</span> <span class="string">Node.js</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;20&#x27;</span>   <span class="comment"># 和你本地版本接近即可</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安装</span> <span class="string">Hexo</span> <span class="string">依赖</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          npm install</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">生成静态文件</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          npm run build   # 或者 hexo generate，但需要在 package.json 里定义</span></span><br><span class="line"><span class="string"></span>        <span class="comment"># 或者在步骤中直接执行 hexo generate</span></span><br><span class="line">        <span class="comment"># 如果没有 package.json 脚本，可以用 npx hexo generate</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">部署到</span> <span class="string">gh-pages</span> <span class="string">分支</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">gh-pages</span>   <span class="comment"># 推送到 gh-pages 分支</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置github-pages"><a class="markdownIt-Anchor" href="#配置github-pages"></a> 配置github pages</h3>
+<p>在这里又被卡了一下，在repo-settings-pages中，选择source:deploy from branch后，应使用gh-pages分支，而非main</p>
+<h3 id="后续更新"><a class="markdownIt-Anchor" href="#后续更新"></a> 后续更新</h3>
+<p>创建post：</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p>或者指定创建路径：</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new -p path/name </span><br></pre></td></tr></table></figure>
+<p>预览：</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate <span class="comment"># 或者hexo g</span></span><br><span class="line">hexo server <span class="comment"># 或者hexo s</span></span><br></pre></td></tr></table></figure>
+<p>通过git提交：</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;更新说明&quot;</span></span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
+<h2 id="回想26613"><a class="markdownIt-Anchor" href="#回想26613"></a> 回想26.6.13</h2>
+<p>在termux上成功实现更新操作</p>
+<h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
+<p>需要安装npm,git<br />
+用npm安装hexo-cli<br />
+用git获取仓库并完成初始化</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/DNdimension/DNblog.git</span><br><span class="line"><span class="built_in">cd</span> DNblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="提交"><a class="markdownIt-Anchor" href="#提交"></a> 提交</h3>
+<p>先登录github,在settings-DevSettings-PersonalAccessTokens，选择生成Token(classic)<br />
+然后配置git</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;2108173756@qq.com&quot;</span></span><br><span class="line">git config --global user.name DNdimension</span><br><span class="line">git remote set-url origin https://DNdimension:token@github.com/DNdimension/DNblog.git</span><br><span class="line">git config --global credential.helper store <span class="comment"># 记住凭证</span></span><br></pre></td></tr></table></figure>
+<h3 id="交替更新"><a class="markdownIt-Anchor" href="#交替更新"></a> 交替更新</h3>
+<p>存在多端更新后，要用pull同步进度</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+<h2 id="回想26614"><a class="markdownIt-Anchor" href="#回想26614"></a> 回想26.6.14</h2>
+<p>使用next主题</p>
+<h3 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h3>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br><span class="line"><span class="built_in">rm</span> -rf themes/next/.git</span><br></pre></td></tr></table></figure>
+<h3 id="应用主题"><a class="markdownIt-Anchor" href="#应用主题"></a> 应用主题</h3>
+<p>修改字段：</p>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<p>采用代替主题配置：<br />
+根目录下创建_config.next.yml，在themes/next/_config.yml中找到需要更改的配置选项，复制到_config.next.yml文件中</p>
+<h2 id="回想26615"><a class="markdownIt-Anchor" href="#回想26615"></a> 回想26.6.15</h2>
+<p>修改了markdown渲染器，为渲染katex数学公式</p>
+<h2 id="回想26616"><a class="markdownIt-Anchor" href="#回想26616"></a> 回想26.6.16</h2>
+<p>使用tags<br />
+使用menu和词云图</p>
+<h1 id="26618-2"><a class="markdownIt-Anchor" href="#26618-2"></a> 26.6.18</h1>
+<p>发现若执行hexo s后修改md文件，网页会自动更新<br />
+添加了categories，archives，更改了tags。加入插件hexo-auto-category，并且修改了_config.yml对应内容</p>
+<h1 id="26624"><a class="markdownIt-Anchor" href="#26624"></a> 26.6.24</h1>
+<p>使用html代码之后要空一行才能继续进行书写</p>
+<h1 id="26627"><a class="markdownIt-Anchor" href="#26627"></a> 26.6.27</h1>
+<p>分隔符要和前一个部分之间空一行</p>
+<h1 id="26827"><a class="markdownIt-Anchor" href="#26827"></a> 26.8.27</h1>
+<p>katex行内公式，起始 $ 之后，终止 $ 之前不要打空格<br />
+win端配置了git的ssh之后，要把项目地址改成ssh</p>
+<figure class="highlight bash"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote -v <span class="comment">#查看仓库地址</span></span><br><span class="line">git remote set-url origin git@github.com:用户名/仓库.git <span class="comment">#更改为ssh</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/DNblog/tags/test/" rel="tag"># test</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/06/17/tech/CodeDrill/warmup/P1038/" rel="prev" title="P1038 神经网络">
+                  <i class="fa fa-angle-left"></i> P1038 神经网络
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/06/18/tech/CodeDrill/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87%E7%BB%BC%E5%90%88%E9%A2%98%E5%8D%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/P1003/" rel="next" title="P1003 铺地毯">
+                  P1003 铺地毯 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">DN</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

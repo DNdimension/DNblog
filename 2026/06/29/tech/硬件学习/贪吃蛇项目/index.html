@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/DNblog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/DNblog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/DNblog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/DNblog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/DNblog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dndimension.github.io","root":"/DNblog/","images":"/DNblog/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/DNblog/js/config.js" defer></script>
+
+    <meta name="description" content="26.06.29  上午 回来研究这个沟槽的点阵屏，不仅右半边发光不能持续，点亮顺序也是依托。            右半屏无法持续点亮       要在这个点阵屏上渲染一些东西，用坐标控制比较直观。于是先写了一个ptoi，把pos(x,y)对应到像素索引i。 但是右半边屏幕的点亮问题还是很难解决。正常点阵在setPixel之后运行一次WriteScreen就能常亮，但右半边必须循环WriteS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪吃蛇项目">
+<meta property="og:url" content="https://dndimension.github.io/DNblog/2026/06/29/tech/%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0/%E8%B4%AA%E5%90%83%E8%9B%87%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:site_name" content="DNblog">
+<meta property="og:description" content="26.06.29  上午 回来研究这个沟槽的点阵屏，不仅右半边发光不能持续，点亮顺序也是依托。            右半屏无法持续点亮       要在这个点阵屏上渲染一些东西，用坐标控制比较直观。于是先写了一个ptoi，把pos(x,y)对应到像素索引i。 但是右半边屏幕的点亮问题还是很难解决。正常点阵在setPixel之后运行一次WriteScreen就能常亮，但右半边必须循环WriteS">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.bmp.ovh/2026/06/29/O4nw8g8W.webp">
+<meta property="og:image" content="https://s3.bmp.ovh/2026/06/29/fABPjmbS.webp">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/6a436eda514f59159c63d6ca.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/2026/06/30/BZPsQKPD.webp">
+<meta property="article:published_time" content="2026-06-29T13:48:03.000Z">
+<meta property="article:modified_time" content="2026-09-06T05:30:55.521Z">
+<meta property="article:author" content="DN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/2026/06/29/O4nw8g8W.webp">
+
+
+<link rel="canonical" href="https://dndimension.github.io/DNblog/2026/06/29/tech/%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0/%E8%B4%AA%E5%90%83%E8%9B%87%E9%A1%B9%E7%9B%AE/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dndimension.github.io/DNblog/2026/06/29/tech/%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0/%E8%B4%AA%E5%90%83%E8%9B%87%E9%A1%B9%E7%9B%AE/","path":"2026/06/29/tech/硬件学习/贪吃蛇项目/","title":"贪吃蛇项目"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>贪吃蛇项目 | DNblog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/DNblog/js/utils.js" defer></script><script src="/DNblog/js/motion.js" defer></script><script src="/DNblog/js/sidebar.js" defer></script><script src="/DNblog/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/DNblog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/DNblog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">DNblog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/DNblog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/DNblog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/DNblog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/DNblog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#260629"><span class="nav-number">1.</span> <span class="nav-text"> 26.06.29</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E5%8D%88"><span class="nav-number">1.1.</span> <span class="nav-text"> 上午</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E5%8D%88"><span class="nav-number">1.2.</span> <span class="nav-text"> 下午</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#260630"><span class="nav-number">2.</span> <span class="nav-text"> 26.06.30</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E5%8D%88-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 上午</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DN</p>
+  <div class="site-description" itemprop="description">For Life & Learns</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/DNblog/archives/">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/DNblog/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/DNblog/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dndimension.github.io/DNblog/2026/06/29/tech/%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0/%E8%B4%AA%E5%90%83%E8%9B%87%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/DNblog/images/avatar.gif">
+      <meta itemprop="name" content="DN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNblog">
+      <meta itemprop="description" content="For Life & Learns">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="贪吃蛇项目 | DNblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          贪吃蛇项目
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-06-29 13:48:03" itemprop="dateCreated datePublished" datetime="2026-06-29T13:48:03+00:00">2026-06-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-09-06 05:30:55" itemprop="dateModified" datetime="2026-09-06T05:30:55+00:00">2026-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/tech/%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">硬件学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="260629"><a class="markdownIt-Anchor" href="#260629"></a> 26.06.29</h1>
+<h2 id="上午"><a class="markdownIt-Anchor" href="#上午"></a> 上午</h2>
+<p>回来研究这个沟槽的点阵屏，不仅右半边发光不能持续，点亮顺序也是依托。</p>
+<figure style="text-align: center; margin: 20px 0;">
+  <img src="https://s3.bmp.ovh/2026/06/29/O4nw8g8W.webp" style="width: 45%;">
+  <figcaption style="color: #888; font-size: 14px; margin-top: 8px;">
+    右半屏无法持续点亮
+  </figcaption>
+</figure>  
+<p>要在这个点阵屏上渲染一些东西，用坐标控制比较直观。于是先写了一个ptoi，把pos(x,y)对应到像素索引i。<br />
+但是右半边屏幕的点亮问题还是很难解决。正常点阵在setPixel之后运行一次WriteScreen就能常亮，但右半边必须循环WriteScreen才能保持能看的亮度。灵光一现发现只要尽量减少阻塞命令的执行，把loop()大部分时间都用于WriteScreen就能有不错的观感。这样就不能用常用的delay()命令，因为这会阻塞全局loop的执行。此时联想到了在mc sapi开发时设想过的一种设计，即维持一个时刻变量，使之周期性均匀变化，在特定的值时执行特定函数。</p>
+<figure class="highlight cpp"><figcaption><span>cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uint8_t</span> dnt;</span><br><span class="line"><span class="built_in">setup</span>() &#123;</span><br><span class="line">  dnt=<span class="number">0</span>;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">loop</span>() &#123;</span><br><span class="line">  <span class="keyword">if</span>(!dnt) &#123;</span><br><span class="line">    dnt=DNT;</span><br><span class="line">    <span class="built_in">CLRPIXEL</span>();</span><br><span class="line">    <span class="built_in">SETPIXEL</span>(); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> dnt--; <span class="comment">//dnt为0时构图并重置</span></span><br><span class="line">  <span class="built_in">WRITESCREEN</span>(); <span class="comment">//绝大部分时间渲染</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先写了一个二维弹球试手<br />
+<img src="https://s3.bmp.ovh/2026/06/29/fABPjmbS.webp" width="45%"></p>
+<h2 id="下午"><a class="markdownIt-Anchor" href="#下午"></a> 下午</h2>
+<p>考虑一会决定写一个贪吃蛇项目，算是目前有难度但不高能写的。<br />
+使用joystick摇杆模块控制方向，发现原来还有个Z轴。<br />
+先把长度为一时的移动给写了，又写了个边界判断。写完边界判断就想写失败界面，提示&quot;OVER&quot;，于是花了半天扣字模<br />
+蛇身的移动需要使用队列，自行模拟由于不知道操作次数所以比较难搞，在开发板上又不能使用含有动态内存分配的std::queue，最后下了一个第三方库ringbuffer，需要指定缓冲区大小。设定为uint8_t类型，单个像素占用8B，考虑到蛇身长度为15就差不多可以结束了，于是分配120B，不算太多<br />
+HT1632库中没有提供检查一个像素是否点亮的，就自行修改了库，写了一个getPixel接口</p>
+<h1 id="260630"><a class="markdownIt-Anchor" href="#260630"></a> 26.06.30</h1>
+<h2 id="上午-2"><a class="markdownIt-Anchor" href="#上午-2"></a> 上午</h2>
+<p>把吃食物和蛇身长度大于1时移动的逻辑写了，接下来时随机生成食物，需要用到random()和randomSeed()<br />
+randomSeed()在setup()中设定即可，seed可以使用悬空模拟读入引脚受电磁波干扰产生的信号，random(u)产生<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi>u</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,u-1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">u</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>的随机数<br />
+食物生成写完之后写了自身碰撞的检测，后面又把胜利时显示WIN的字模扣出来了，代码基本完成，尝试优化<br />
+尝试把失败和胜利的显示逻辑统一，使用了template，算是第一次用c++的现代语法</p>
+<figure class="highlight cpp"><figcaption><span>cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="type">size_t</span> N&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">showInfo</span><span class="params">(<span class="type">const</span> <span class="type">uint8_t</span> (&amp;arr)[N])</span> </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">size_t</span> i=<span class="number">0</span>;i&lt;N;i++) matrix.<span class="built_in">setPixel</span>(<span class="built_in">pgm_read_byte</span>(&amp;arr[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来把ptoi的公式进行简化，能算的先算了，*8改成&lt;&lt;3<br />
+PROGMEM把OVER和WIN的字模存在FLASH而非SRAM<br />
+本来还应该引入状态机，但考虑到这可能影响点阵屏右半屏的显示，决定就使用dnt<br />
+最后程序占用5872B的存储，383B的内存</p>
+<img src="https://pic1.imgdb.cn/item/6a436eda514f59159c63d6ca.jpg" width="45%">  
+<img src="https://s3.bmp.ovh/2026/06/30/BZPsQKPD.webp" width="45%">  
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/06/28/tech/CodeDrill/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87%E7%BB%BC%E5%90%88%E9%A2%98%E5%8D%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/P1908/" rel="prev" title="P1908 逆序对">
+                  <i class="fa fa-angle-left"></i> P1908 逆序对
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/07/01/tech/%E8%84%9A%E6%9C%AC%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96/%E5%8E%BB%E9%99%A4%E5%B0%8F%E5%88%9D%E9%AB%98%E8%AF%8D%E6%B1%87%E7%9A%84%E5%9B%9B%E7%BA%A7%E8%AF%8D%E4%B9%A6%E5%88%B6%E4%BD%9C/" rel="next" title="去除小初高词汇的四级词书制作">
+                  去除小初高词汇的四级词书制作 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">DN</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
