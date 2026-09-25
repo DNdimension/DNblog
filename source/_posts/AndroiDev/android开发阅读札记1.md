@@ -90,4 +90,12 @@ EnterNameDemoTheme {
 这里EnterNameDemoTheme表示一个函数，只接受一个参数，并且这个参数是个函数。kotlin中复杂变量作为右值要用花括号包住，同时若传入的参数只有一个并且是函数，可以去掉圆括号  
 
 # 第三讲
+var可读写变量 val只读变量 const（编译期）常量  
+kotlin有类型推断，要推断long int要加L，推断float要加F  
 
+# 第四讲
+if else  
+三元运算符：if(exp) v1 else v2  
+
+> 26.9.25
+这书讲的也太啰嗦，直接看android官网教程了  
