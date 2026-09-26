@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/DNblog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/DNblog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/DNblog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/DNblog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/DNblog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dndimension.github.io","root":"/DNblog/","images":"/DNblog/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/DNblog/js/config.js" defer></script>
+
+    <meta name="description" content="概述 书是Android Programming for Beginners, Fourth Edition 由于一部分教材的草台，对于此类编成书籍的类似教材印象一直不好。但找来找去没有找到比较现代的android开发的文字教程，只能选择这本书来学 可能是书比较啰嗦，也可能是洋文读起来膈应，推进速度提不起来 这本书融合了一部分vibe coding，在当前大环境下似乎比较明智  第一讲 配置an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android开发阅读札记1">
+<meta property="og:url" content="https://dndimension.github.io/DNblog/2026/09/16/AndroiDev/android%E5%BC%80%E5%8F%91%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B01/index.html">
+<meta property="og:site_name" content="DNblog">
+<meta property="og:description" content="概述 书是Android Programming for Beginners, Fourth Edition 由于一部分教材的草台，对于此类编成书籍的类似教材印象一直不好。但找来找去没有找到比较现代的android开发的文字教程，只能选择这本书来学 可能是书比较啰嗦，也可能是洋文读起来膈应，推进速度提不起来 这本书融合了一部分vibe coding，在当前大环境下似乎比较明智  第一讲 配置an">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-09-16T18:55:54.000Z">
+<meta property="article:modified_time" content="2026-09-26T15:43:06.558Z">
+<meta property="article:author" content="DN">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dndimension.github.io/DNblog/2026/09/16/AndroiDev/android%E5%BC%80%E5%8F%91%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B01/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dndimension.github.io/DNblog/2026/09/16/AndroiDev/android%E5%BC%80%E5%8F%91%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B01/","path":"2026/09/16/AndroiDev/android开发阅读札记1/","title":"android开发阅读札记1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>android开发阅读札记1 | DNblog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/DNblog/js/utils.js" defer></script><script src="/DNblog/js/motion.js" defer></script><script src="/DNblog/js/sidebar.js" defer></script><script src="/DNblog/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/DNblog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/DNblog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">DNblog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/DNblog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/DNblog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/DNblog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/DNblog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%AE%B2"><span class="nav-number">2.</span> <span class="nav-text"> 第一讲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E8%AE%B2"><span class="nav-number">3.</span> <span class="nav-text"> 第二讲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%AE%B2"><span class="nav-number">4.</span> <span class="nav-text"> 第三讲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E8%AE%B2"><span class="nav-number">5.</span> <span class="nav-text"> 第四讲</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DN</p>
+  <div class="site-description" itemprop="description">For Technical Learns</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/DNblog/archives/">
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/DNblog/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/DNblog/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dndimension.github.io/DNblog/2026/09/16/AndroiDev/android%E5%BC%80%E5%8F%91%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/DNblog/images/avatar.gif">
+      <meta itemprop="name" content="DN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNblog">
+      <meta itemprop="description" content="For Technical Learns">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="android开发阅读札记1 | DNblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          android开发阅读札记1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-09-16 18:55:54" itemprop="dateCreated datePublished" datetime="2026-09-16T18:55:54+00:00">2026-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-09-26 15:43:06" itemprop="dateModified" datetime="2026-09-26T15:43:06+00:00">2026-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/AndroiDev/" itemprop="url" rel="index"><span itemprop="name">AndroiDev</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h1>
+<p>书是Android Programming for Beginners, Fourth Edition<br />
+由于一部分教材的草台，对于此类编成书籍的类似教材印象一直不好。但找来找去没有找到比较现代的android开发的文字教程，只能选择这本书来学<br />
+可能是书比较啰嗦，也可能是洋文读起来膈应，推进速度提不起来<br />
+这本书融合了一部分vibe coding，在当前大环境下似乎比较明智</p>
+<h1 id="第一讲"><a class="markdownIt-Anchor" href="#第一讲"></a> 第一讲</h1>
+<p>配置android studio环境，没什么好说的。这里本人选择一个较老的软件版本，因为电脑太拉了<br />
+跑自动生成的默认程序，不知道为什么我一直没跑起来，后面没办法换了一个比较新的软件版本，能跑了<br />
+没有独显跑不动AVD，只能拿真机测试，还好无线调试比较方便<br />
+创建项目的时候会下载并构建基本的gradle工具，挂着cf warp才勉强能进行</p>
+<h1 id="第二讲"><a class="markdownIt-Anchor" href="#第二讲"></a> 第二讲</h1>
+<p>kotlin语法什么的也不会，跟着先学</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> x = <span class="number">42</span></span><br><span class="line">Log.d(<span class="string">&quot;Data output: &quot;</span>, <span class="string">&quot;The value of x is <span class="variable">$x</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>kotlin有点弱类型，但又不是完全弱。这里会根据右值自动推算类型，但有的时候又得写明白。同时val定义的像是常量<br />
+Log.d有两个参数，第一个表明消息发出方，第二个是消息内容<br />
+使用logcat需要android.util.Log。对于没有import的类和函数，在android studio用<em>alt+enter</em>自动导入</p>
+<figure class="highlight kotlin"><figcaption><span>骨架</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MainActivity</span> : <span class="type">ComponentActivity</span>() &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>MainActivity.kt的主要部分，其中MainActivity类是入口，onCreate是LifeCycle中的一环，此外依次是onStart，onResume，onPause，onStop，onDestroy。应用启动会经历create,start和resume，退回桌面会触发pause和stop，回到应用界面会触发start和resume，销毁时即是pause,stop+destroy<br />
+冒号表示继承，亦表示指定类型，两者也是一回事<br />
+这时书给出了一个比较复杂的例子（至少看到这里的时候是这么认为的）来活跃气氛，并阐述现代android开发模式</p>
+<figure class="highlight kotlin"><figcaption><span>MainActivity.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MainActivity</span> : <span class="type">ComponentActivity</span>() &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        enableEdgeToEdge()</span><br><span class="line">        setContent &#123;</span><br><span class="line">            MaterialTheme &#123;</span><br><span class="line">                Scaffold(modifier = Modifier.fillMaxSize()) &#123; innerPadding -&gt;</span><br><span class="line">                    EnterText(modifier = Modifier.padding(innerPadding))</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Composable</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">Greeting</span><span class="params">(name: <span class="type">String</span>, modifier: <span class="type">Modifier</span> = Modifier)</span></span> &#123;</span><br><span class="line">    Text(</span><br><span class="line">        text = <span class="string">&quot;Hello <span class="variable">$name</span>!&quot;</span>,</span><br><span class="line">        modifier = modifier</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Preview(showBackground = true)</span></span><br><span class="line"><span class="meta">@Composable</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">GreetingPreview</span><span class="params">()</span></span> &#123;</span><br><span class="line">    EnterNameDemoTheme &#123;</span><br><span class="line">        Greeting(<span class="string">&quot;Android&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Composable</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">EnterText</span><span class="params">(modifier: <span class="type">Modifier</span> = Modifier)</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> name <span class="keyword">by</span> remember &#123; mutableStateOf(<span class="string">&quot;&quot;</span>) &#125;</span><br><span class="line">    Column(modifier = modifier.padding(<span class="number">16.</span>dp)) &#123;</span><br><span class="line">        TextField(</span><br><span class="line">            value = name,</span><br><span class="line">            onValueChange = &#123; name = it &#125;,</span><br><span class="line">            label = &#123; Text(<span class="string">&quot;Enter your name&quot;</span>) &#125;,</span><br><span class="line">            modifier = Modifier.fillMaxWidth()</span><br><span class="line">        )</span><br><span class="line">        Spacer(modifier = Modifier.height(<span class="number">16.</span>dp))</span><br><span class="line">        Greeting(name = name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@Composable用于告知编译器，下面的函数是jetpack compose的ui构建块，而非普通kotlin函数<br />
+compose的又一个特性是state，用于持久化存储数据。本例中作用于name变量<br />
+从本例来看，ui构建块指这样一个函数，里面调用了控件构造函数（和其他ui构建块）<br />
+涉及到xxxTheme，setContent字样的代码，语法看上去都很猎奇。这里是使用了lambda+神秘语法糖的结果。以下面的代码为例</p>
+<figure class="highlight kotlin"><figcaption><span>骨架</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EnterNameDemoTheme &#123;</span><br><span class="line">    Greeting(<span class="string">&quot;Android&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里EnterNameDemoTheme表示一个函数，只接受一个参数，并且这个参数是个函数。kotlin中复杂变量作为右值要用花括号包住，同时若传入的参数只有一个并且是函数，可以去掉圆括号</p>
+<h1 id="第三讲"><a class="markdownIt-Anchor" href="#第三讲"></a> 第三讲</h1>
+<p>var可读写变量 val只读变量 const（编译期）常量<br />
+kotlin有类型推断，要推断long int要加L，推断float要加F</p>
+<h1 id="第四讲"><a class="markdownIt-Anchor" href="#第四讲"></a> 第四讲</h1>
+<p>if else<br />
+三元运算符：if(exp) v1 else v2</p>
+<blockquote>
+<p>26.9.25<br />
+这书讲的也太啰嗦，直接看android官网教程了</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/09/06/CodeDrill/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87%E7%BB%BC%E5%90%88%E9%A2%98%E5%8D%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/P2704/" rel="prev" title="P2704 炮兵阵地">
+                  <i class="fa fa-angle-left"></i> P2704 炮兵阵地
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/09/19/CodeDrill/%E8%83%BD%E5%8A%9B%E6%8F%90%E5%8D%87%E7%BB%BC%E5%90%88%E9%A2%98%E5%8D%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/P2602/" rel="next" title="P2602 数字计数">
+                  P2602 数字计数 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">DN</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
