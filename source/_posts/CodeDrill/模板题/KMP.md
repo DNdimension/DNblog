@@ -2,11 +2,11 @@
 title: kmp重探
 categories:
   - CodeDrill
-  - 能力提升综合题单
-  - 字符串
+  - 模板题
 date: 2026-09-25 21:23:07
 tags:
 ---
+[题目链接](https://www.luogu.com.cn/problem/P3375)
 # 前情提要
 kmp虽然学过，但是当时时间不够，只能囫囵吞枣，理解似是而非。因此重探
 # 问题
