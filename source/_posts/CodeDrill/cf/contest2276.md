@@ -3,6 +3,7 @@ title: contest2276
 date: 2026-10-16 12:49:07
 tags:
 ---
+> 26.20.16
 n久之后的第一打  
 # A_PerfectSandwiches
 显然
