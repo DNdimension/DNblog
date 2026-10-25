@@ -1,5 +1,8 @@
 ---
 title: SegTree
+categories:
+  - CodeDrill
+  - 模板题
 date: 2026-10-16 12:33:38
 tags:
 ---

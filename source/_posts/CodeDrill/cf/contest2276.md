@@ -1,5 +1,8 @@
 ---
 title: contest2276
+categories:
+  - CodeDrill
+  - cf
 date: 2026-10-16 12:49:07
 tags:
 ---

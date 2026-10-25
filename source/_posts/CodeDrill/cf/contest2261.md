@@ -1,5 +1,8 @@
 ---
 title: contest2261
+categories:
+  - CodeDrill
+  - cf
 date: 2026-10-18 21:22:07
 tags:
 ---
