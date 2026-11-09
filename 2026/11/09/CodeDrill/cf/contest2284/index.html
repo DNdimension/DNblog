@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/DNblog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/DNblog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/DNblog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/DNblog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/DNblog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dndimension.github.io","root":"/DNblog/","images":"/DNblog/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/DNblog/js/config.js" defer></script>
+
+    <meta name="description" content="变成fvv  A 中学数学  B 显然，但是码力太蒻  C1 没有早点确定细究两个数的因数信息是根本不现实的，constructive题目寻求特解 一开始没有注意到值域只有1e5，以为不能筛 以及有点忘记线性筛的写法了。。。 最后虽然糊出解法，但是左右脑互博又否掉了，另外写了一个错误解法上去吃罚时 终于还是被数学卡住。由于gcd(a,b)&lt;&#x3D;&gt;gcd(b,a-b) (a&gt;b)，反">
+<meta property="og:type" content="article">
+<meta property="og:title" content="contest2284">
+<meta property="og:url" content="https://dndimension.github.io/DNblog/2026/11/09/CodeDrill/cf/contest2284/index.html">
+<meta property="og:site_name" content="DNblog">
+<meta property="og:description" content="变成fvv  A 中学数学  B 显然，但是码力太蒻  C1 没有早点确定细究两个数的因数信息是根本不现实的，constructive题目寻求特解 一开始没有注意到值域只有1e5，以为不能筛 以及有点忘记线性筛的写法了。。。 最后虽然糊出解法，但是左右脑互博又否掉了，另外写了一个错误解法上去吃罚时 终于还是被数学卡住。由于gcd(a,b)&lt;&#x3D;&gt;gcd(b,a-b) (a&gt;b)，反">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-11-09T22:43:28.000Z">
+<meta property="article:modified_time" content="2026-11-09T15:31:00.238Z">
+<meta property="article:author" content="DN">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dndimension.github.io/DNblog/2026/11/09/CodeDrill/cf/contest2284/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://dndimension.github.io/DNblog/2026/11/09/CodeDrill/cf/contest2284/","path":"2026/11/09/CodeDrill/cf/contest2284/","title":"contest2284"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>contest2284 | DNblog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/DNblog/js/utils.js" defer></script><script src="/DNblog/js/motion.js" defer></script><script src="/DNblog/js/sidebar.js" defer></script><script src="/DNblog/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/DNblog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/DNblog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">DNblog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/DNblog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/DNblog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/DNblog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/DNblog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text"> A</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text"> B</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c1"><span class="nav-number">3.</span> <span class="nav-text"> C1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c2"><span class="nav-number">4.</span> <span class="nav-text"> C2</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DN</p>
+  <div class="site-description" itemprop="description">For Technical Learns</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/DNblog/archives/">
+          <span class="site-state-item-count">57</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/DNblog/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/DNblog/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dndimension.github.io/DNblog/2026/11/09/CodeDrill/cf/contest2284/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/DNblog/images/avatar.gif">
+      <meta itemprop="name" content="DN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNblog">
+      <meta itemprop="description" content="For Technical Learns">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="contest2284 | DNblog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          contest2284
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-11-09 22:43:28 / Modified: 15:31:00" itemprop="dateCreated datePublished" datetime="2026-11-09T22:43:28+00:00">2026-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/CodeDrill/" itemprop="url" rel="index"><span itemprop="name">CodeDrill</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/DNblog/categories/CodeDrill/cf/" itemprop="url" rel="index"><span itemprop="name">cf</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>变成fvv</p>
+<h1 id="a"><a class="markdownIt-Anchor" href="#a"></a> A</h1>
+<p>中学数学</p>
+<h1 id="b"><a class="markdownIt-Anchor" href="#b"></a> B</h1>
+<p>显然，但是码力太蒻</p>
+<h1 id="c1"><a class="markdownIt-Anchor" href="#c1"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2284/problem/C1">C1</a></h1>
+<p>没有早点确定细究两个数的因数信息是根本不现实的，constructive题目寻求特解<br />
+一开始没有注意到值域只有1e5，以为不能筛<br />
+以及有点忘记线性筛的写法了。。。<br />
+最后虽然糊出解法，但是左右脑互博又否掉了，另外写了一个错误解法上去吃罚时<br />
+终于还是被数学卡住。由于gcd(a,b)&lt;=&gt;gcd(b,a-b) (a&gt;b)，反着说，只要把原序列元素弄成p，deltaX就一定和原元素互质。公式反着用就不会了。。。</p>
+<h1 id="c2"><a class="markdownIt-Anchor" href="#c2"></a> <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2284/problem/C2">C2</a></h1>
+<p>雷霆<br />
+想了半天又写了半天，写了个O(Tlog<sup>2</sup>m)的dp</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi>r</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi><mtext> </mtext><mi>c</mi><mi>a</mi><mi>n</mi><mtext> </mtext><mi>s</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>y</mi><mtext> </mtext><mi>g</mi><mi>u</mi><mi>e</mi><mi>s</mi><mi>s</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mtext> </mtext><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>≤</mo><mn>2</mn><mtext> </mtext><mi>f</mi><mi>o</mi><mi>r</mi><mtext> </mtext><mi>b</mi><mi mathvariant="normal">−</mi><mi>a</mi><mo>≥</mo><mi>s</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>l</mi><mtext> </mtext><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo separator="true">,</mo><mtext> </mtext><mi>b</mi><mi>u</mi><mi>t</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mtext> </mtext><mi>i</mi><mi>s</mi><mtext> </mtext><mi>u</mi><mi>n</mi><mi>i</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">Or\ you\ can\ simply\ guess\ that\ dist(a,b)\le2\ for\ b−a\ge small\ const,\ but\ that\ is\ uninteresting.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace"> </span><span class="mord mathdefault">b</span><span class="mord">−</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord">.</span></span></span></span><br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>n</mi><mtext> </mtext><mi>f</mi><mi>a</mi><mi>c</mi><mi>t</mi><mo separator="true">,</mo><mtext> </mtext><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mtext> </mtext><mi>p</mi><mi>r</mi><mi>o</mi><mi>b</mi><mi>l</mi><mi>e</mi><mi>m</mi><mtext> </mtext><mi>i</mi><mi>n</mi><mtext> </mtext><mi>i</mi><mi>t</mi><mi>s</mi><mtext> </mtext><mi>g</mi><mi>e</mi><mi>n</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>l</mi><mtext> </mtext><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>u</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mtext> </mtext><mi>i</mi><mi>s</mi><mtext> </mtext><mi>a</mi><mi>n</mi><mtext> </mtext><mi>o</mi><mi>p</mi><mi>e</mi><mi>n</mi><mtext> </mtext><mi>p</mi><mi>r</mi><mi>o</mi><mi>b</mi><mi>l</mi><mi>e</mi><mi>m</mi><mo separator="true">,</mo><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><mi>i</mi><mi>t</mi><mtext> </mtext><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>s</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mtext> </mtext><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>n</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>e</mi><mi>x</mi><mi>c</mi><mi>e</mi><mi>e</mi><mi>d</mi><mi>s</mi><mtext> </mtext><mn>3.</mn></mrow><annotation encoding="application/x-tex">In\ fact,\ this\ problem\ in\ its\ general\ formulation\ is\ an\ open\ problem,\ and\ it\ appears\ that\ dist(a,b)\ never\ exceeds\ 3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">m</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mspace"> </span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace"> </span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mord mathdefault">s</span><span class="mspace"> </span><span class="mord">3</span><span class="mord">.</span></span></span></span><br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>f</mi><mtext> </mtext><mi>y</mi><mi>o</mi><mi>u</mi><mtext> </mtext><mi>d</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>a</mi><mtext> </mtext><mi>s</mi><mi>u</mi><mi>b</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>e</mi><mtext> </mtext><mi>p</mi><mi>r</mi><mi>o</mi><mi>o</mi><mi>f</mi><mtext> </mtext><mi>t</mi><mi>o</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>r</mi><mi>y</mi><mo separator="true">,</mo><mtext> </mtext><mi>f</mi><mi>e</mi><mi>e</mi><mi>l</mi><mtext> </mtext><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi><mtext> </mtext><mi>t</mi><mi>o</mi><mtext> </mtext><mi>s</mi><mi>h</mi><mi>a</mi><mi>r</mi><mi>e</mi><mtext> </mtext><mi>i</mi><mi>t</mi><mtext> </mtext><mi>i</mi><mi>n</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>c</mi><mi>o</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">If\ you\ discover\ a\ substantive\ proof\ to\ the\ contrary,\ feel\ free\ to\ share\ it\ in\ the\ comments.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mspace"> </span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace"> </span><span class="mord mathdefault">a</span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">u</span><span class="mord mathdefault">b</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace"> </span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mspace"> </span><span class="mord mathdefault">s</span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mspace"> </span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace"> </span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mspace"> </span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/11/05/CodeDrill/cf/contest2283/" rel="prev" title="contest2283">
+                  <i class="fa fa-angle-left"></i> contest2283
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/DNblog/2026/11/09/CodeDrill/cf/contest2280/" rel="next" title="contest2280">
+                  contest2280 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">DN</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
