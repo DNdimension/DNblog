@@ -167,3 +167,7 @@ win端配置了git的ssh之后，要把项目地址改成ssh
 git remote -v #查看仓库地址
 git remote set-url origin git@github.com:用户名/仓库.git #更改为ssh
 {% endcodeblock %}
+
+# 26.11.18
+添加了home  
+`hexo new page "home"`

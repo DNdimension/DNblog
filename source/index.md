@@ -1,0 +1,18 @@
+---
+layout: false
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在跳转...</title>
+    <script>
+        window.location.href = "./home/";
+    </script>
+</head>
+<body>
+    <p>正在跳转到主页，如果没有自动跳转，请<a href="./home/">点击这里</a>。</p>
+</body>
+</html>
